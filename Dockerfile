@@ -24,7 +24,7 @@ RUN ./build.sh "$version" "$(uname -m)"
 RUN mkdir -p /output
 RUN cp ./releases/bash-$(echo "$version" | cut -c1).$(echo "$version" | cut -c2)-static /output/bash
 
-RUN if ! ldd /output/bash 2>&1 | grep -q "not a dynamic executable"; then \
+RUN if ! ldd /output/bash 2>&1 | grep -q "Not a valid dynamic program"; then \
       echo "Error: /output/bash is dynamically linked" >&2; \
       exit 1; \
     fi
