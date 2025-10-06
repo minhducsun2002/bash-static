@@ -17,7 +17,7 @@ RUN if [ ! -f "./version-${version}.sh" ]; then \
 
 RUN sed -i s/ftp.gnu.org/mirror.ossplanet.net/g build.sh
 RUN sed -i 's|--enable-silent-rules|--enable-static-link --enable-strict-posix-default --enable-readline --enable-history --enable-job-control --enable-multibyte --enable-bang-history --enable-coprocesses|g' build.sh
-RUN ./build.sh "$version" "$(uname -m)"
+RUN ./build.sh linux "$(uname -m)" "$version"
 # major=$(echo "$version" | cut -c1)
 # minor=$(echo "$version" | cut -c2)
 
