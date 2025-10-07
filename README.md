@@ -1,3 +1,17 @@
+## About this fork
+
+This fork was made to automate building static versions of Bash via Docker, using an Alpine base image.
+
+See the [**Packages**](https://github.com/minhducsun2002?tab=packages&repo_name=bash-static) section of this repository for more info about the images.
+
+To use, copy `/output/bash-static` from the respective image.
+
+
+The original README follows.
+
+---
+
+
 # bash-static
 
 Because we all need the most static bash we can get in this world.
