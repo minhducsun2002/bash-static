@@ -50,7 +50,7 @@ jobs:
           file: Dockerfile
           push: true
           platforms: linux/amd64
-          tags: ${{ matrix.version }}-musl
+          tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}/bash-static:${{ matrix.version }}-musl
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             version=${{ matrix.version }}
